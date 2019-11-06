@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="add-category-item">
+
+    <div class="item-form-block">
+        <label for="itemForm" class="form-label">добавить товар:</label>
+        <form action="items.php" class="item-form" name="itemForm" method="post">
+            <label for="itemName">названия товара:</label>
+            <input type="text" name="itemName" placeholder="введите название товара" id="itemName">
+
+            <label for="itemDescription">описания товара:</label>
+            <textarea name="itemDescription" placeholder="введите описания товара" id="itemDescription"></textarea>
+
+            <label for="itemCategory">выберете категорию товара:</label>
+            <select name="itemCategory" id="itemCategory">
+                <?php foreach ($categoriesArr as $category) { ?>
+                    <option><?php echo $category; ?></option>
+                <?php } ?>
+            </select>
+            <input type="submit" value="добавить">
+        </form>
+    </div>
+
+    <div class="category-form-block">
+        <label for="categoryForm" class="form-label">добавить категорию:</label>
+        <form action="categories.php" class="category-form" name="categoryForm" method="post">
+            <label for="categoryName"></label>
+            <input type="text" name="categoryName" placeholder="введите название категории" id="categoryName">
+
+            <input type="submit" value="добавить">
+        </form>
+    </div>
+</div>
+
+<label for="categoryLinks" class="form-label">доступные категории:</label>
+<ol id="categoryLinks">
+    <?php foreach ($categoriesArr as $category) { ?>
+        <li><a href="#"><?php echo $category; ?></a></li>
+    <?php } ?>
+</ol>
+
+<script src="js/main.js"></script>
+</body>
+</html>
