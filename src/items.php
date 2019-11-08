@@ -19,12 +19,14 @@ if( '' != filesize('listCategories.txt')){
 } else {
     $categoriesArr = [];
 }
-
-$itemName = $_POST['itemName'];
+if(isset($_POST['itemName'])){
+    $itemName = $_POST['itemName'];
+}else {
+    $itemName = [];
+}
 if ($itemName != []) {
     $postItems = $_POST['itemCategory'];
     file_put_contents("products/$postItems", serialize($_POST) . PHP_EOL, FILE_APPEND);
 }
 
-
-header('Location: /');
+//header('Location: /');

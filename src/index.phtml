@@ -43,10 +43,15 @@
 <label for="categoryLinks" class="form-label">доступные категории:</label>
 <ol id="categoryLinks">
     <?php foreach ($categoriesArr as $category) { ?>
-        <li><a href="#"><?php echo $category; ?></a></li>
-    <?php } ?>
+        <li>
+            <?php echo "<a href='product-list.php?validate_name=$category'</a>"?>
+            <?php echo $category ?>
+        </li>
+    <?php
+    } ?>
 </ol>
 
 <script src="js/main.js"></script>
 </body>
 </html>
+
