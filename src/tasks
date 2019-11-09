@@ -1,8 +1,4 @@
-при переходе на ссылку ol>li>a[href="$category.php"]
-    -будет открыватся новое окно с выводом всех items файла $category.php
-    -подгружать данные с файла products/$category сразу на страницу AJAX
-    -есть другая альтернатива на PHP?
-
-Notice: Undefined index: itemName in /var/www/app/items.php on line 25
-
-кто пишет валидацию формы? front может тоже задать валидацию
+почему если в index.php менять местами require_once 'items.php';
+                                                   и
+                                       require_once 'index.phtml';
+не подгрузит часть на phtml

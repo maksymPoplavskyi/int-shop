@@ -21,7 +21,7 @@
 
             <label for="itemCategory">выберете категорию товара:</label>
             <select name="itemCategory" id="itemCategory">
-                <?php foreach ($categoriesArr as $category) { ?>
+                <?php foreach (categoriesArr() as $category) { ?>
                     <option><?php echo $category; ?></option>
                 <?php } ?>
             </select>
@@ -42,7 +42,7 @@
 
 <label for="categoryLinks" class="form-label">доступные категории:</label>
 <ol id="categoryLinks">
-    <?php foreach ($categoriesArr as $category) { ?>
+    <?php foreach (categoriesArr() as $category) { ?>
         <li>
             <?php echo "<a href='product-list.php?validate_name=$category'</a>"?>
             <?php echo $category ?>
