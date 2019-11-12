@@ -16,8 +16,10 @@
             <label for="itemName">названия товара:</label>
             <input type="text" name="itemName" placeholder="введите название товара" id="itemName">
 
+
             <label for="itemDescription">описания товара:</label>
             <textarea name="itemDescription" placeholder="введите описания товара" id="itemDescription"></textarea>
+
 
             <label for="itemCategory">выберете категорию товара:</label>
             <select name="itemCategory" id="itemCategory">
@@ -25,6 +27,7 @@
                     <option><?php echo $category; ?></option>
                 <?php } ?>
             </select>
+            <input type="hidden" name="count" value="1">
             <input type="submit" value="добавить">
         </form>
     </div>
@@ -44,7 +47,7 @@
 <ol id="categoryLinks">
     <?php foreach (categoriesArr() as $category) { ?>
         <li>
-            <?php echo "<a href='product-list.php?validate_name=$category'</a>"?>
+            <?php echo "<a href='product-list.php?category_name=$category'</a>"?>
             <?php echo $category ?>
         </li>
     <?php

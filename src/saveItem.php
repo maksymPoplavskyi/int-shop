@@ -2,6 +2,7 @@
 
 require_once 'items.php';
 
-function saveItem($postItems) {
-    file_put_contents("products/$postItems", serialize($_POST) . PHP_EOL, FILE_APPEND);
-}
+//function saveItem($postCategory, $postDescription, $postCount) {
+
+//    file_put_contents("products/$postCategory", serialize($_POST) . PHP_EOL, FILE_APPEND);
+//}

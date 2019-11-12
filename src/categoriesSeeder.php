@@ -22,6 +22,8 @@ function categoriesArr() {
 
         return $categoriesArr;
     } else {
-       return $categoriesArr = [];
+        return $categoriesArr = [];
     }
 }
+
+global $categoriesArr;
